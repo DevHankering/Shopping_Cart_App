@@ -21,10 +21,10 @@ const Cart = () => {
     <div className="w-11/12 max-w-[1200px] mx-auto">
   {
     cart.length > 0  ? 
-    (<div className="flex flex-between ">
+    (<div className="flex flex-between max-lg:flex-col">
 
 
-      <div className="px-16 w-[60%]">
+      <div className="px-16 max-sm:px-0 w-[60%] max-lg:w-[100%]">
         {
           cart.map( (item,index) => {
             return <CartItem key={item.id} item={item} itemIndex={index} />
@@ -32,7 +32,7 @@ const Cart = () => {
         }
       </div>
 
-      <div className=" py-16 flex flex-col justify-between">
+      <div className=" py-16 flex flex-col justify-between max-lg:text-center">
 
         <div className="sticky top-10">
           <div className="text-green-800 font-extrabold text-xl">Your Cart</div>
